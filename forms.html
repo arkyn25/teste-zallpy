@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  </head>
+<body>
+  <section class="forms" >
+    <header class="">
+      <h1 class="title">Formulário para cadastro</h1>
+      <p class="subtitle">Preencha os campos abaixo.</p>
+    </header>
+  
+  <hr>
+  <form action="" method="" id="myForm" class="formulario">
+    <div class="row">
+      <fieldset>
+        <div class="col">
+          <label class="label" for="name">Nome Completo: 
+          <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
+          </label>
+          <label for="data">Data de Nascimento:
+            <input type="text" class="form-control"
+            name="data" onkeyup="mascaraData(this, this.value)" id="data" required>
+          </label>
+          <label class="form-label" for="cpf-number">CPF: 
+            <input class="control" type="text" name="cpf" id="cpf-number" maxlength="11" required>
+          <label for="telefone">Celular:
+            <input type="text" class="form-control"
+            name="telefone" id="telefone" maxlength="15" required>
+          </label>
+          <label class="form-label" for="email">E-mail:
+            <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
+            </label>
+          <label for="cep">CEP:
+            <input type="text" id="cep" class="form-control" >
+          </label>
+
+          <label for="logradouro">Logradouro:
+            <input type="text" name="logradouro"
+            id="street" class="form-control">
+          </label>
+          
+          <label for="numero">Numero:
+            <input type="text" name="numero" class="form-control">
+          </label>
+          <label for="complemento">Complemento:
+            <input type="text" name="complemento" class="form-control">
+          </label> 
+
+          <label for="bairro">Bairro:
+            <input type="text" name="bairro" id="neighborhood" maxlength="20"  
+            id="neighborhood" class="form-control" required>
+            </label>
+            <label class="label" for="city">Cidade: 
+              <input  type="text" id="city" class="form-control" maxlength="200" required>
+          </label>          
+        </label>
+        <div>
+          <div>
+            <label class="label" for="state">UF:
+              <input type="text" id="state" class="form-control">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label class="label" for="descricao">Descrição:</label>
+          <br>
+          <textarea class="textarea is-small" id="descricao" name="descricao" maxlength="500" cols="50" rows="5" required></textarea>
+         <br>
+      </div>
+
+      <div class="buttons is-centered">
+        <button class="btn btn-success" type="button" id="submit-button">Enviar</button>
+        <button class="btn btn-warning" type="reset">Limpar</button>
+      </div>
+    </fieldset>
+  </section>
+    <section class="form-data"></section>
+    <script src="index.js"></script>
+    <script src="service.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

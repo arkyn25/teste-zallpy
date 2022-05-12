@@ -9,8 +9,8 @@ const address = document.getElementById('cep');
         document.getElementById('neighborhood').value = data.bairro;
         document.getElementById('city').value = data.cidade;
         document.getElementById('state').value = data.estado_info.nome;
+        console.log(data)
       })
-      console.log(response.data)
     }
     ).catch(error => {
       console.log(error);

@@ -50,22 +50,21 @@ function id(el){
 return document.getElementById(el);
 }
 
-const submitButton = document.querySelector('.submit-button');
+const submitButton = document.getElementById('submit-button');
 function renderForm(event) {
   event.preventDefault();
-  const formElements = document.getElementsByTagName('input');
+  const formElements = document.querySelectorAll('input');
   for (let index = 0; index < formElements.length; index += 1) {
     const userInput = formElements[index].value;
-
-    if (userInput.length === 0) {
+    if (userInput.length == 0) {
       alert('Preencha todos os campos');
       return false;
     }
-    console.log(userInput);
+    console.log(userInput)
   }
 }
 
-const clearButton = document.querySelector('.clear-button');
+const clearButton = document.getElementById('clear');
 function clearFields() {
   const formElements = document.querySelectorAll('input');
   const textArea = document.querySelector('textarea')
@@ -77,8 +76,6 @@ function clearFields() {
     div[index].innerText = '';
   }
 }
-
-
 
 submitButton.addEventListener('click', renderForm);
 clearButton.addEventListener('click', clearFields);

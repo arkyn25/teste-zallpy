@@ -24,43 +24,43 @@
       <fieldset>
         <div class="col">
           <label class="label" for="name">Nome Completo: 
-          <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
+          <input class="form-control input" type="text" name="name" id="name" maxlength="40" required>
           </label>
           <label for="data">Data de Nascimento:
-            <input type="text" class="form-control"
-            name="data" onkeyup="mascaraData(this, this.value)" id="data" required>
+            <input type="text" class="form-control input"
+            name="data" onkeyup="mascaraData(this, this.value)" placeholder="dd/mm/aaaa" id="data" required>
           </label>
           <label class="form-label" for="cpf-number">CPF: 
-            <input class="control" type="text" name="cpf" id="cpf-number" maxlength="11" required>
+            <input class="control input" type="text" name="cpf" id="cpf-number" maxlength="11" required>
           <label for="telefone">Celular:
-            <input type="text" class="form-control"
+            <input type="text" class="form-control input"
             name="telefone" id="telefone" maxlength="15" required>
           </label>
           <label class="form-label" for="email">E-mail:
-            <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
+            <input class="form-control input" type="email" name="email" id="email" maxlength="50" required>
             </label>
           <label for="cep">CEP:
-            <input type="text" id="cep" class="form-control" >
+            <input type="text" id="cep" class="form-control input" >
           </label>
 
           <label for="logradouro">Logradouro:
             <input type="text" name="logradouro"
-            id="street" class="form-control">
+            id="street" class="form-control input">
           </label>
           
           <label for="numero">Numero:
-            <input type="text" name="numero" class="form-control">
+            <input type="text" name="numero" class="form-control input">
           </label>
           <label for="complemento">Complemento:
-            <input type="text" name="complemento" class="form-control">
+            <input type="text" name="complemento" class="form-control input">
           </label> 
 
           <label for="bairro">Bairro:
             <input type="text" name="bairro" id="neighborhood" maxlength="20"  
-            id="neighborhood" class="form-control" required>
+            id="neighborhood" class="form-control input" required>
             </label>
             <label class="label" for="city">Cidade: 
-              <input  type="text" id="city" class="form-control" maxlength="200" required>
+              <input  type="text" id="city" class="form-control input" maxlength="200" required>
           </label>          
         </label>
         <div>
@@ -79,9 +79,9 @@
          <br>
       </div>
 
-      <div class="buttons is-centered">
+      <div>
         <button class="btn btn-success" type="button" id="submit-button">Enviar</button>
-        <button class="btn btn-warning" type="reset">Limpar</button>
+        <button class="btn btn-warning" type="reset" id="clear">Limpar</button>
       </div>
     </fieldset>
   </section>
